@@ -1,0 +1,91 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.container::before {
+    content: 'Calculator';
+    color: white;
+    display: inline;
+    background-color: rgb(95, 95, 95);
+    position: absolute;
+    top: -1.5rem;
+    letter-spacing: 5px;
+    font-size: 1.2rem;
+}
+
+.container {
+    position: relative;
+    margin: 10rem auto 5rem;
+    max-width: 40rem;
+    border: 2rem solid rgb(95, 95, 95);
+    border-radius: 5px;
+}
+
+.display {
+    height: 10rem;
+    background-color: lightgray;
+    text-align: right;
+    vertical-align: middle;
+    font-size: 4rem;
+}
+
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.btn {
+    background-color: white;
+    border: 1px solid lightgray;
+    outline: none;
+    aspect-ratio: 1 / 1;
+    width: calc(100%/4);
+    font-size: 2.5rem;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    box-shadow: -1rem -1rem 1.5rem rgba(255, 255, 255, 0.1), .5rem .5rem 1.5rem rgba(0, 0, 0, 0.2);
+}
+
+.btn:hover {
+    background-color: lightblue;
+}
+
+.btn.reset {
+    color: rgb(240, 125, 125);
+}
+
+.btn.reset:hover {
+    background-color: rgb(255, 194, 194);
+}
+
+.btn.operator {
+    background-color: rgb(237, 238, 238); 
+    color: rgb(97, 97, 202);
+}
+
+.btn.operator:hover {
+    background-color: rgb(119, 119, 119);
+    color: white;
+}
+
+.btn.calculate {
+    background-color: rgb(199, 199, 240);
+}
+
+.btn.calculate:hover {
+    background-color: rgb(76, 76, 168);
+    color: white;
+}
+
+.active {
+    background-color: aquamarine !important;
+    color: black
+}
